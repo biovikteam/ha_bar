@@ -63,6 +63,8 @@ a {
 
 .feature-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .feature-item {
@@ -74,7 +76,7 @@ a {
     line-height: 42px;
 }
 
-.index-colunms {
+.index-columns {
     color: #000000;
 
     background-color: #f8f5f2; /* страховка */
@@ -83,7 +85,7 @@ a {
     background-repeat: repeat;
 }
 
-.index-colunms h2 {
+.index-columns h2 {
     font-size: 30px;
     line-height: 42px;
 }
@@ -193,4 +195,111 @@ a {
 .restore:hover,
 .restore:focus {
     text-decoration: none;
+}
+
+/* сеточные стили */
+
+.main-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-header-logo {
+    order: 2;
+    width: 368px;
+    height: 153px;
+}
+
+.site-navigation {
+    width: 620px;
+    margin: 0;
+    padding: 0;
+}
+
+.user-navigation {
+    width: 148px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation-wrapper {
+    width: 100%;
+    margin-bottom: 60px;
+
+    background-color: tomato;
+    /* background-color: #000000; */
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.main-navigation-wrapper .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features {
+    margin-bottom: 80px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-item {
+    width: 300px;
+}
+
+.index-columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 80px;
+    margin-bottom: 35px;
+}
+
+.news {
+    width: 380px;
+}
+
+.gallery {
+    width: 300px;
+}
+
+.contacts {
+    width: 380px;
+}
+
+.appointment {
+    width: 300px;
+}
+
+.main-footer {
+    margin-top: 65px;
+    padding: 60px 0;
+}
+
+.main-footer .container {
+    display: flex;
+}
+
+.footer-contacts {
+    width: 320px;
+    margin: 0;
+    margin-right: 80px;
+}
+
+.footer-social {
+    width: 145px;
+    margin: 0;
+}
+
+.footer-copyright {
+    width: 150px;
+    margin: 0;
+    margin-left: auto;
 }

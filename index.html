@@ -16,20 +16,24 @@
             <a class="main-header-logo">
                 <img src="svg/index-logo.svg" alt="Логотип барбершопа Бородинский" width="368" height="153">
             </a>
-            <ul class="site-navigation">
-                <li><a href="info.html">Информация</a></li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="price.html">Прайс-лист</a></li>
-                <li><a href="shop.html">Магазин</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-            <ul class="user-navigation">
-                <li>
-                    <a class="login-link" href="login.html">
-                        Войти
-                    </a>
-                </li>
-            </ul>
+            <div class="main-navigation-wrapper">
+                <div class="container">
+                    <ul class="site-navigation">
+                        <li><a href="info.html">Информация</a></li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="price.html">Прайс-лист</a></li>
+                        <li><a href="shop.html">Магазин</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                    <ul class="user-navigation">
+                        <li>
+                            <a class="login-link" href="login.html">
+                                Войти
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -54,7 +58,7 @@
             </ul>
         </section>
 
-        <div class="index-colunms">
+        <div class="index-columns">
             <section class="news">
                 <h2>Новости</h2>
                 <ul class="news-list">
@@ -82,7 +86,7 @@
             </section>
         </div>
 
-        <div class="index-colunms">
+        <div class="index-columns">
             <section class="contacts">
                 <h2>Контактная информация</h2>
                 <p>
@@ -127,26 +131,28 @@
     </main>
 
     <footer class="main-footer">
-        <p class="footer-contacts">
-            Барбершоп &laquo;Бородинский&raquo;<br>
-            Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-            <a href="#">Как нас найти</a><br>
-            Телефон: +7 (812) 666-01-66
-        </p>
-
-        <div class="footer-social">
-            <p><b>Давайте Дружить!</b></p>
-            <ul>
-                <li><a class="social-button" href="#">Вконтакте</a></li>
-                <li><a class="social-button" href="#">Фейсбук</a></li>
-                <li><a class="social-button" href="#">Инстаграм</a></li>
-            </ul>
+        <div class="container">
+            <p class="footer-contacts">
+                Барбершоп &laquo;Бородинский&raquo;<br>
+                Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+                <a href="#">Как нас найти</a><br>
+                Телефон: +7 (812) 666-01-66
+            </p>
+    
+            <div class="footer-social">
+                <b>Давайте Дружить!</b>
+                <ul>
+                    <li><a class="social-button" href="#">Вконтакте</a></li>
+                    <li><a class="social-button" href="#">Фейсбук</a></li>
+                    <li><a class="social-button" href="#">Инстаграм</a></li>
+                </ul>
+            </div>
+    
+            <p class="footer-copyright">
+                Разработано:
+                <a class="button" href="#">Developer</a>
+            </p>
         </div>
-
-        <p class="footer-copyright">
-            Разработано:
-            <a class="button" href="#">Developer</a>
-        </p>
     </footer>
 
     <section class="modal modal-login">
