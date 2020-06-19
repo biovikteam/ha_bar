@@ -10,7 +10,7 @@ body {
     text-transform: uppercase; /* редкое явление */
 
     background-color: #000000; /* подстраховываем картинку */
-    background-image: url(); /* извлечь и добавить */
+    background-image: url('../img/ha_bar-bg.jpg');
     background-position: top center;
     background-repeat: no-repeat;
 }
@@ -18,6 +18,25 @@ body {
 a {
     text-decoration: none;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* .visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+
+    white-space: nowrap;
+} */
 
 .button {
     font: inherit; /* нужно для кнопок и ссылок */
@@ -42,11 +61,51 @@ a {
     color: #ffffff;
 
     background-color: #000000; /* страхуем */
+
+    /* сетка */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-header-logo {
+    order: 2;
+    width: 368px;
+    height: 153px;
+}
+
+.main-navigation-wrapper {
+    width: 100%;
+    margin-bottom: 60px;
+
+    background-color: #000000;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.main-navigation-wrapper .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-navigation {
+    width: 620px;
+}
+
+.user-navigation {
+    width: 148px;
 }
 
 .site-navigation,
 .user-navigation {
     list-style: none; /* отключение буллитов */
+
+    margin: 0;
+    padding: 0;
 }
 
 .site-navigation a,
@@ -61,14 +120,24 @@ a {
     background-color: #242424;
 }
 
+.features {
+    margin-bottom: 80px;
+}
+
 .feature-list {
     list-style: none;
     padding: 0;
     margin: 0;
+
+    /* сетка */
+    display: flex;
+    justify-content: space-between;
 }
 
 .feature-item {
     text-align: center;
+
+    width: 300px;
 }
 
 .feature-item h3 {
@@ -80,14 +149,24 @@ a {
     color: #000000;
 
     background-color: #f8f5f2; /* страховка */
-    background-image: url(); /* извлечь часть фона в макете pattern-light.jpg*/
+    background-image: url('../img/pattern-light.jpg'); /* извлечь часть фона в макете pattern-light.jpg*/
     background-position: 0 0;
     background-repeat: repeat;
+
+    /* сетка */
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 80px;
+    margin-bottom: 35px;
 }
 
 .index-columns h2 {
     font-size: 30px;
     line-height: 42px;
+}
+
+.news {
+    width: 380px;
 }
 
 .news-list {
@@ -98,9 +177,21 @@ a {
     text-transform: none;
 }
 
+.gallery {
+    width: 300px;
+}
+
 .gallery-content {
     background-color: #cccccc; /* подложка под картинку */
     border: 7px solid #ffffff;
+}
+
+.contacts {
+    width: 380px;
+}
+
+.appointment {
+    width: 300px;
 }
 
 .appointment-item input {
@@ -117,9 +208,22 @@ a {
 .main-footer {
     color: #ffffff;
     background-color: #212121; /* страховка */
-    background-image: url(); /* извлечь часть фона в макете pattern-dark.jpg */
+    background-image: url('../img/pattern-dark.jpg');
     background-position: 0 0;
     background-repeat: repeat;
+
+    margin-top: 65px;
+    padding: 60px 0;
+}
+
+.main-footer .container {
+    display: flex;
+}
+
+.footer-contacts {
+    width: 320px;
+    margin: 0;
+    margin-right: 80px;
 }
 
 .footer-contacts a {
@@ -134,6 +238,9 @@ a {
 
 .footer-social {
     text-align: center;
+
+    width: 145px;
+    margin: 0;
 }
 
 .footer-social ul {
@@ -146,6 +253,10 @@ a {
 
 .footer-copyright {
     text-align: center;
+
+    width: 150px;
+    margin: 0;
+    margin-left: auto;
 }
 
 .footer-copyright .button:hover,
@@ -195,111 +306,4 @@ a {
 .restore:hover,
 .restore:focus {
     text-decoration: none;
-}
-
-/* сеточные стили */
-
-.main-navigation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main-header-logo {
-    order: 2;
-    width: 368px;
-    height: 153px;
-}
-
-.site-navigation {
-    width: 620px;
-    margin: 0;
-    padding: 0;
-}
-
-.user-navigation {
-    width: 148px;
-    margin: 0;
-    padding: 0;
-}
-
-.main-navigation-wrapper {
-    width: 100%;
-    margin-bottom: 60px;
-
-    background-color: tomato;
-    /* background-color: #000000; */
-}
-
-.container {
-    width: 940px;
-    margin: 0 auto;
-    padding: 0 10px;
-}
-
-.main-navigation-wrapper .container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.features {
-    margin-bottom: 80px;
-}
-
-.feature-list {
-    display: flex;
-    justify-content: space-between;
-}
-
-.feature-item {
-    width: 300px;
-}
-
-.index-columns {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 80px;
-    margin-bottom: 35px;
-}
-
-.news {
-    width: 380px;
-}
-
-.gallery {
-    width: 300px;
-}
-
-.contacts {
-    width: 380px;
-}
-
-.appointment {
-    width: 300px;
-}
-
-.main-footer {
-    margin-top: 65px;
-    padding: 60px 0;
-}
-
-.main-footer .container {
-    display: flex;
-}
-
-.footer-contacts {
-    width: 320px;
-    margin: 0;
-    margin-right: 80px;
-}
-
-.footer-social {
-    width: 145px;
-    margin: 0;
-}
-
-.footer-copyright {
-    width: 150px;
-    margin: 0;
-    margin-left: auto;
 }
