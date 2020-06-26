@@ -64,7 +64,7 @@ input[type="radio"].visually-hidden {
     background-color: #663d15;
 }
 
-/* первый для ссылок, второй для кнопок*/
+/* отключённая кнопка: первый для ссылок, второй для кнопок*/
 .button.disabled, 
 .button:disabled {
     cursor: default;
@@ -137,7 +137,6 @@ input[type="radio"].visually-hidden {
     display: block;
     padding: 25px 20px;
 
-    vertical-align: middle;
     color: #ffffff;
 }
 
@@ -279,20 +278,80 @@ input[type="radio"].visually-hidden {
     width: 300px;
 }
 
+.gallery-container {
+    position: relative;
+    height: 260px;
+}
+
+.gallery-button {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+
+    width: 140px;
+    margin: 0;
+}
+
+.gallery-button-back {
+    left: 0;
+}
+
+.gallery-button-next {
+    right: 0;
+}
+
 .gallery-content {
+    height: 164px;
+    margin: 0;
+
     background-color: #cccccc; /* подложка под картинку */
     border: 7px solid #ffffff;
+}
+
+.gallery-content img {
+    height: 164px;
+    width: 286px;
 }
 
 .contacts {
     width: 380px;
 }
 
+.contacts p {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
 .appointment {
     width: 300px;
 }
 
+.appointment-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.appointment-item {
+    width: 140px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.appointment-item label {
+    display: block;
+    margin-bottom: 9px;
+    margin-left: 15px;
+}
+
 .appointment-item input {
+    box-sizing: border-box;
+    width: 140px;
+    padding-top: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 7px;
+
     font: inherit; /* нужно для input */
 
     background-color: transparent;
@@ -301,6 +360,13 @@ input[type="radio"].visually-hidden {
 
 .appointment-item input:focus {
     border-color: #663d15;
+}
+
+.appointment .button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 0;
 }
 
 .main-footer {
@@ -341,12 +407,41 @@ input[type="radio"].visually-hidden {
     margin: 0;
 }
 
+.footer-social b {
+    display: block;
+    margin-bottom: 15px;
+}
+
 .footer-social ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 141px;
+    margin: 0 auto;
+    padding: 0;
+
     list-style: none;
 }
 
 .social-button {
-    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 43px;
+    height: 43px;
+
+    background-color: #000000;
+}
+
+.social-button:hover,
+.social-button:focus {
+    background-color: #ffffff;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+    fill: #000000;
 }
 
 .footer-copyright {
@@ -355,6 +450,16 @@ input[type="radio"].visually-hidden {
     width: 150px;
     margin: 0;
     margin-left: auto;
+}
+
+.footer-copyright b {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.footer-copyright .button {
+    display: block;
+    margin-right: 0;
 }
 
 .footer-copyright .button:hover,
@@ -367,21 +472,93 @@ input[type="radio"].visually-hidden {
     color: #000000;
 
     background-color: #f8f3f0; /* страховка */
-    background-image: url(); /* извлечь часть фона в макете pattern-light.jpg*/
+    background-image: url("../img/pattern-light.jpg");
     background-position: 0 0;
     background-repeat: repeat;
+    position: fixed; /* если не задать top, left, right или bottom - блок невидим */
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
-.modal h2 {
+.modal-login {
+    top: 120px;
+    left: 50%; /* выравнивание по центру */
+
+    display: none; /* скрытие по умолчанию */
+
+    width: 300px;
+    margin-left: -230px; /* выравнивание по центру */
+    padding: 50px 80px;
+}
+
+.modal-login h2 {
+    margin: 0;
+    margin-bottom: 20px;
+
     font-size: 30px;
     line-height: 42px;
 }
 
-.login-form input[type="email"],
+.modal-description {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.login-form p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: -34px;
+
+    width: 22px;
+    height: 22px;
+
+    background-color: transparent;
+    border: 0; /* у кнопки есть рамка по умолчанию */
+
+    cursor: pointer;
+}
+
+.modal-close:before,
+.modal-close:after {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    
+    width: 19px;
+    height: 3px;
+
+    background-color: #d0d0d0;
+}
+
+.modal-close:before {
+    transform: rotate(45deg);
+}
+
+.modal-close:after {
+    transform: rotate(-45deg);
+}
+
+/* .modal h2 {
+    font-size: 30px;
+    line-height: 42px;
+} */
+
+.login-form input[type="text"],
 .login-form input[type="password"] {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 15px;
+    padding-right: 40px;
+
     font: inherit;
     color: #000;
-    text-transform: uppercase;
+    text-transform: inherit;
 
     background-color: #f9f6f3;
     border: 2px solid #000;
@@ -389,6 +566,75 @@ input[type="radio"].visually-hidden {
 
 .login-form input:focus {
     border-color: #663d15;
+}
+
+.login-icon-user {
+    background-image: url("../svg/user.svg");
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.login-icon-password {
+    background-image: url("../svg/lock.svg");
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+
+.login-help {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 15px 0;
+}
+
+.login-checkbox {
+    position: relative;
+
+    padding-left: 30px;
+
+    cursor: pointer;
+}
+
+/* чекбокс стилями css вместо встроенного */
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 17px;
+    height: 17px;
+
+    border: 2px solid #000;
+}
+
+.login-checkbox input[type="checkbox"]:focus + .checkbox-indicator {
+    color: #663d15;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+/* отметка чекбокса - крестик */
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 1px;
+
+    width: 15px;
+    height: 2px;
+
+    background-color: #000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+    transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+    transform: rotate(-45deg);
 }
 
 .login-checkbox:hover,
@@ -404,4 +650,9 @@ input[type="radio"].visually-hidden {
 .restore:hover,
 .restore:focus {
     text-decoration: none;
+}
+
+.login-form .button {
+    width: 100%;
+    margin-right: 0;
 }
