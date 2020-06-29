@@ -656,3 +656,21 @@ input[type="radio"].visually-hidden {
     width: 100%;
     margin-right: 0;
 }
+
+.modal-map {
+    top: 50%;
+    left: 50%;
+
+    display: none;
+
+    width: 766px;
+    height: 561px;
+    margin-top: -280px;
+    margin-left: -390px;
+
+    border: 7px solid #fff;
+}
+
+.modal-map p {
+    margin: 0;
+}
