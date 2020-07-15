@@ -948,12 +948,16 @@ input[type="radio"].visually-hidden {
 
     display: none;
 
-    width: 766px;
-    height: 561px;
+    width: 780px;
+    height: 560px;
     margin-top: -280px;
     margin-left: -390px;
 
     border: 7px solid #fff;
+}
+
+.modal-map iframe {
+    position: absolute;
 }
 
 .modal-map p {
